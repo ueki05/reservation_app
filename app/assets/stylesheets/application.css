@@ -13,5 +13,5 @@
  *= require_tree .
  *= require_self
  *= require fullcalendar_engine/application
- *= require jquery-ui/dark-hive
+ *= require jquery-ui/redmond
 */
