@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'fullcalendar_engine'
+gem 'jquery-ui-themes'
