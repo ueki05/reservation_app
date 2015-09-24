@@ -1,0 +1,25 @@
+<%= image_tag("logo_ohnishi_lab.png") %>
+<h2>共用スペース スケジュール</h2>
+
+<%= link_to 'Create Event', 'javascript:void()', :id=> 'new_event' %>
+<div>
+  <div class="calendar"></div>
+</div>
+<div id = "create_event_dialog" class="dialog" style ="display:none;"></div>
+<div id = "event_desc_dialog" class="dialog" style ="display:none;"></div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  var options = {
+    theme: true,
+    defaultView: 'agendaWeek',
+  };
+
+  $('.calendar').fullCalendar($.extend(full_calendar_options,options));
+  $('#new_event').click(function(event) {
+    FullcalendarEngine.Form.display()
+      event.preventDefault();
+  });
+});
+</script>
