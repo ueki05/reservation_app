@@ -1,4 +1,3 @@
-<%= image_tag("logo_ohnishi_lab.png") %>
 <h2>共用スペース スケジュール</h2>
 
 <%= link_to 'Create Event', 'javascript:void()', :id=> 'new_event' %>
@@ -15,6 +14,8 @@ $(document).ready(function(){
     theme: true,
     defaultView: 'agendaWeek',
     firstDay: 1,
+    height: 800,
+
     titleFormat: {
       month: 'yyyy年M月',
       week: "yyyy年M月d日{ ～ }{[yyyy年]}{[M月]d日}",
@@ -28,6 +29,7 @@ $(document).ready(function(){
     firstHour: 8,
     minTime: 8,
     maxTime: 20,
+
   };
 
   $('.calendar').fullCalendar($.extend(full_calendar_options,options));
